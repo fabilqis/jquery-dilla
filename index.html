@@ -5,43 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="index.js">
-    <title>jquery</title>
+    <link rel="stylesheet" href="index.css">
+
+    <title>To Do jQuery</title>
     <style>
         p {
-            background: #dad;
-            font-weight: bold;
-            font-size: 16px;
+            font-weight: normal;
+            font-size: 20px;
         }
     </style>
+
 </head>
 
 <body>
-    <!-- <h1 id="heading" class="h1">Hello World</h1> -->
+    <div class="mainstyle">
 
-    <!-- <a href="http://jquery.com/">jQuery</a>
-    <script src="jquery.js"></script>
-    <script>
-    $( document ).ready(function() {
-        $( "a" ).click(function( event ) {
-            alert( "The link will no longer take you to jquery.com" );
-            event.preventDefault();
-        });
-    });
-    </script> -->
+        <div class="container">
+            <div class="row">
+                <form class="col">
+                    <input type="radio" name="radio" value="Focus">Focus</input>
+                    <input type="radio" name="radio" value="Fit in">Fit In</input>
+                    <input type="radio" name="radio" value="Revive">Revive</input>
+                    <input type="radio" name="radio" value="Goals">Goals</input>
+                </form>
+            </div>
+        </div>
+        
 
-    <button> Toogle them </button>
-    <p>Keripik</p>
-    <p>sink.kong</p>
 
-    <script>
-        $("button").click(function () {
-            $("p").toggle("slow");
-        });
-    </script>
-    
-    <script src="index.js"></script>
+        <div>
+            <center>
+                <h1 class="animated infinite jello">To Do List</h1>
+            </center>
+        </div>
+
+
+
+        <div class="mainlist">
+            <div class="filltext container ">
+                <div class="d-flex form-row">
+                    <div class="col-11">
+                        <input type="text" class="form-control" placeholder="Type here...">
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary mb-2"> + </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                </div>
+                <div class="col-4">
+
+                    <ol>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+            crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+
+    </div>
 </body>
 
 </html>

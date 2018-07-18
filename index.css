@@ -1,0 +1,5 @@
+.mainstyle{
+    background-image: url("background1.png");
+    min-height: 500px;
+    position: relative;
+}
