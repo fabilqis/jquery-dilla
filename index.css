@@ -1,5 +1,13 @@
+.cover{
+    padding: 50px;
+}
+
+.selector{
+    padding: 20px;
+}
+
 .mainstyle{
     background-image: url("background1.png");
-    min-height: 500px;
     position: relative;
+    min-height: 500px;
 }
