@@ -5,7 +5,7 @@ $(document).ready(function () {
   });
   $("button").click(function () {
       let text = $("input[type=text]").val();
-      var value = $("form input[type='radio']:checked").val();
+      var value = $("input[type='radio']:checked").val();
       $("ol").append(value+"<p>"+text+"</p>");
     });
   });
