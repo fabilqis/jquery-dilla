@@ -1,36 +1,36 @@
-body{
+body {
     background-image: url("./image/background.jpeg");
     position: relative;
 }
 
-h1{
-    font-size: 80px;   
+h1 {
+    font-size: 80px;
 }
-.cover{
+
+.cover {
     margin: 50px;
 }
 
-.selector{
+.selector {
     margin-bottom: 15px;
 }
 
-.todo-list{
+.todo-list {
     text-align: center;
     margin-top: 20px;
 }
 
-
 li {
-   list-style-position: center;
-   list-style: none;
+    list-style-position: center;
+    list-style: none;
 }
 
-#add{
+#add {
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#deleter{
+#deleter {
     float: left;
     right: 180px;
     position: absolute;
