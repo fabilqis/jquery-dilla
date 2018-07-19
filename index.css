@@ -1,17 +1,37 @@
+body{
+    background-image: url("./image/background.jpeg");
+    position: relative;
+}
+
+h1{
+    font-size: 80px;   
+}
 .cover{
-    padding: 50px;
+    margin: 50px;
 }
 
 .selector{
     padding: 20px;
 }
 
-.mainstyle{
-    background-image: url("background1.png");
-    position: relative;
-    min-height: 500px;
+.todo-list{
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* .olcontainer{
-    text-align: center;
-} */
+
+li {
+   list-style-position: center;
+   list-style: none;
+}
+
+#add{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#deleter{
+    float: left;
+    right: 150px;
+    position: absolute;
+}
