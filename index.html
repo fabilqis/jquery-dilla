@@ -5,20 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/id.js">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="index.js">
     <link rel="stylesheet" href="index.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <title>To Do jQuery</title>
-  
+
+    <style type="text/css">
+        .clock {
+            position: absolute;
+            color: gray;
+            font-size: 40px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
+
 </head>
 
 <body>
-    <div class="mainstyle">
+    <header>
+        <div id="MyClockDisplay" class="clock"></div>
+    </header>
 
+    <main>
         <div class="cover">
             <center>
                 <h1 class="animated infinite jello">To Do List</h1>
@@ -28,16 +44,16 @@
         <div class="selector container">
             <div class="row">
                 <div class="col-3">
-                    <input type="radio" name="radio" value="Focus ▶">  Focus</input>
+                    <input type="radio" name="radio" value="Focus ▶"> Focus</input>
                 </div>
                 <div class="col-3">
-                    <input type="radio" name="radio" value="Fit In ▶">  Fit In</input>
+                    <input type="radio" name="radio" value="Fit In ▶"> Fit In</input>
                 </div>
                 <div class="col-3">
-                    <input type="radio" name="radio" value="Revive ▶">  Revive</input>
+                    <input type="radio" name="radio" value="Revive ▶"> Revive</input>
                 </div>
                 <div class="col-3">
-                    <input type="radio" name="radio" value="Goals ▶">  Goals</input>
+                    <input type="radio" name="radio" value="Goals ▶"> Goals</input>
                 </div>
             </div>
         </div>
@@ -56,15 +72,40 @@
         </div>
 
 
-        <div id="add" class="container">            
+        <div id="add" class="container">
         </div>
-    
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="index.js"></script>
+        <script type="text/javascript">
+            function showTime() {
+                var date = new Date();
+                var h = date.getHours(); // 0 - 23
+                var m = date.getMinutes(); // 0 - 59
+                var s = date.getSeconds(); // 0 - 59
+                var session = "AM";
 
-    </div>
+                if (h == 0) {
+                    h = 12;
+                }
+                if (h > 12) {
+                    h = h - 12;
+                    session = "PM";
+                }
+                h = (h < 10) ? "0" + h : h;
+                m = (m < 10) ? "0" + m : m;
+                s = (s < 10) ? "0" + s : s;
+                var time = h + ":" + m + ":" + s + " " + session;
+                document.getElementById("MyClockDisplay").innerText = time;
+                document.getElementById("MyClockDisplay").textContent = time;
+                setTimeout(showTime, 1000);
+            }
+            showTime();
+        </script>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
 </body>
 
 </html>
