@@ -11,8 +11,7 @@ h1{
 }
 
 .selector{
-    padding: 20px;
-    text-align: center;
+    margin-bottom: 15px;
 }
 
 .todo-list{
