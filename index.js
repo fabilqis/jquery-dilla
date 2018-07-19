@@ -5,7 +5,7 @@ $(document).ready(function () {
     
       if ($("input[type='text']").val().length === 0) {
         alert("Fill the blank");
-      }else {
+      } else {
         var text = $("input[type='text']").val();
         $("#add").append("<div class='todo-list'>" + "<li>" + value +
           "&nbsp;" + "&nbsp;" + text +  "<button type='button' id='deleter' class='btn btn-danger btn-xs'>X</button>"+"</li>" + "</div>" );
@@ -14,6 +14,10 @@ $(document).ready(function () {
     });
   });
 
+
+$(document).on("click", "li", function(){
+  $(this).css("text-decoration", "line-through");
+});
 
 $(document).on("click", "#deleter", function () {
   $(this).parent().hide();
